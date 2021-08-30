@@ -1,4 +1,5 @@
 const { User, Thought } = require('../models');
+const { db } = require('../models/user');
 const { param } = require('../routes/api.thought-routes');
 
 const userController = {
@@ -46,7 +47,7 @@ const userController = {
 
     // Put to update user by id /api/users/:id
     updateUser({ params, body }, res) {
-        User.findByIdAndUpdate({ _id: paramas.id }, body, {new: true, runValidators: true}
+        User.findByIdAndUpdate({ _id: paramas.id }, body, {new: true, runValidators: true})
             .then(dbUserData => {
                 if (!dbUserData) {
                     res.status(404).json({ message: 'No user found by this id'});
@@ -74,5 +75,37 @@ const userController = {
     },
     // Friend Related Routes
 
-    // Post to add a new friend to a user;s friend list
-}
+    // Post to add a new friend to a users friend list
+    addFriend({ params }, res) {
+        User.findOneAndUpdate(
+            { _id: params.userId },
+            { $push: { friends: params.friendId } },
+            { new: true, runValidators: true }
+        )
+        .then(dbUserData => {
+            if (!dbUserData) {
+                res.status(404).json({ message: 'No user found by this id'});
+                return;
+            }
+            res.json(dbUserData);
+        })
+        .catch(err => res.json(err));
+    },
+    // Delete to remove a friend from a users friend list
+    deleteFriend({ params }, res) {
+        User.findOneAndUpdate(
+            { _id: params.userId },
+            { $pull: { friends: params.friendId} },
+            { new: true }
+        )
+        .then(dbUserData => {
+            if (dbUserData) {
+                res.status(404).json({ message: 'No user found by this id'});
+            }
+            res.json(dbUserData);
+        })
+        .catch(err => res.json(err));
+    }
+};
+
+module.exports = userController;
