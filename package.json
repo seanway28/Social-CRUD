@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/seanway28/Social-CRUD/issues"
   },
-  "homepage": "https://github.com/seanway28/Social-CRUD#readme"
+  "homepage": "https://github.com/seanway28/Social-CRUD#readme",
+  "dependencies": {
+    "mongoose": "^6.0.2"
+  }
 }
