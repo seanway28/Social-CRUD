@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/seanway28/Social-CRUD#readme",
   "dependencies": {
-    "mongoose": "^6.0.2"
+    "mongoose": "^6.0.3"
   }
 }
