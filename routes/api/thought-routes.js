@@ -11,7 +11,7 @@ const {
 
 router
     .route('/')
-    .get(getAllthoughts)
+    .get(getAllThoughts)
     .post(createThought)
 
 router
