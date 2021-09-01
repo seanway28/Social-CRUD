@@ -1,18 +1,26 @@
-# Social-CRUD
+# Social-CRUD ~ 18. NoSQL Challenge: Social Network API
 
 ## Description
 
 ![image](https://user-images.githubusercontent.com/81600120/131370492-d5ddeb15-6ffb-42d0-95ed-03db862ebf6d.png)
 
-### Table of Contents
+
+
+## Table of Contents
 
 • Installation
+
 • Acceptance Criteria
+
 • Video (coming this week 9/1/21)
+
 • Resources
+
 • Questions
 
-### Installation
+
+
+## Installation
 
 `npm install`
 
@@ -20,7 +28,8 @@
 or
 `node server.js`
 
-### Acceptance Criteria
+
+## Acceptance Criteria
 
 GIVEN a social network API
 
@@ -40,7 +49,8 @@ WHEN I test API POST and DELETE routes in Insomnia Core
 
 THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
-### Video Walk Through
+
+## Video Walk Through
 
 (coming this week 9/1/21)
 
