@@ -1,5 +1,5 @@
 const { User, Thought } = require('../models');
-const { db } = require('../models/User');
+//const { db } = require('../models/User');
 const { param } = require('../routes/api/thought-routes');
 
 const userController = {

@@ -64,7 +64,7 @@ const thoughtController = {
     })
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
-          res.status(404).jsom({ message: "No thought found by this id " });
+          res.status(404).json({ message: "No thought found by this id." });
           return;
         }
         res.json(dbThoughtData);
@@ -79,14 +79,14 @@ const thoughtController = {
         if (!dbThoughtData) {
           return res
             .status(404)
-            .json({ message: "No thought found by this id" });
+            .json({ message: "No thought found by this id." });
           //return;
         }
         return User.findByIdAndUpdate(
           { username: dbThoughtData.username },
           { $pull: { thoughts: params.id } },
           { new: true }
-        );
+        )
       })
       .catch((err) => res.status(400).json(err));
   },
@@ -101,7 +101,7 @@ const thoughtController = {
     )
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
-          res.status(404).json({ message: "No thought found by that id" });
+          res.status(404).json({ message: "No thought found by that id." });
           return;
         }
         res.json(dbThoughtData);
@@ -124,7 +124,7 @@ const thoughtController = {
         res.json(dbThoughtData);
       })
       .catch((err) => res.json(err));
-  },
+  }
 };
 
 module.exports = thoughtController;
