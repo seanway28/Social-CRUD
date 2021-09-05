@@ -10,7 +10,7 @@ const {
 } = require ('../../controllers/thought-controller');
 
 router
-    .route('/')
+    .route('/') 
     .get(getAllThoughts)
     .post(createThought)
 
