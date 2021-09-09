@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/seanway28/Social-CRUD#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongoose": "^6.0.3"
+    "kill-port": "^1.6.1",
+    "mongoose": "^6.0.5"
   }
 }
