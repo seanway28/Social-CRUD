@@ -57,6 +57,6 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 ## Video Walk Through
 
-(coming this week 9/1/21)
+https://drive.google.com/file/d/1GwYn91PWRy3d-lvskiwD26LZ2ra9ZWRI/view
 
 To see more of my challanges, please click here: https://github.com/seanway28
