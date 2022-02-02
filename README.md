@@ -12,7 +12,7 @@
 
 • Acceptance Criteria
 
-• Video (coming this week 9/1/21)
+• Video 
 
 • Resources
 
